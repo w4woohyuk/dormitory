@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>web-css</title>
+    <style>
+    body{margin:0px;}
+    h1{margin-bottom:0px;}
+    h4 {border-bottom:1px solid gray;
+        margin:0px;
+        padding:5px;}
+    ol{border-right:1px solid gray;
+        width: 100px;
+        margin:0px;
+        padding:20px;}
+    #grid {display: grid;
+        grid-template-columns: 150px 1fr;}
+    #fooster{border-top: 1px solid gray;
+        text-align:right;
+        padding-right: 10px;}
+    @media (max-width:600px) {
+        #grid{display:block;}
+        ol{border-right:none;
+        border-bottom: 1px solid gray;
+        width:auto;}
+    }
+        
+    </style>
+</head>
+
+<body>
+    <h1><a href="home.html" class="href">호그와트의 기숙사</a></h1>
+    <h4>호그와트에는 총 4 개의 기숙사가 있습니다.</h4>
+    <div id="grid">
+        <ol>
+            <li><a href="gr.html" class="href">그리핀도르</a></li> 
+            <li><a href="sl.html" class="href">슬리데린</a></li>
+            <li><a href="hf.html" class="href">후플푸프</a></li>
+            <li><a href="rv.html" class="href">래번클로</a></li>
+        </ol>
+        <div>
+            <h2>슬리데린</h2>
+            <p>
+                모토: 재간꾼들을 위한 기숙사
+            </p>
+            <p>
+                창립자: 살라자르 슬리데린
+            </p>
+            <p>
+                창립 이념:  "가장 순수한 혈통을 지닌 아이들만 가르치도록 하세." 
+            </p>
+            <p>
+                상징 동물: 뱀
+            </p>
+            <p>
+                상징색: 녹색, 은색
+            </p>
+            <p>
+                상징 원소: 물
+            </p>
+            <p>
+                특성: 지략, 야망, 교활, 결단력, 긍지, 형제애
+            </p>
+            <p>
+                사감: 호러스 슬러그혼
+            </p>
+            <p>
+                기숙사 유령: 피투성이 남작
+            </p>
+            <p>
+                기숙사 입구: 지하감옥 벽
+            </p>
+        </div>
+        </div>
+
+    <div id="fooster">
+        <p>시경연 29기 정우혁</p>
+    </div>
+
+    <input type="button" value="night" onclick="
+    if(this.value === 'night'){
+        document.querySelector('body').style.backgroundColor = 'black';
+        document.querySelector('body').style.color = 'white';
+        this.value = 'day';
+        var weblist = document.querySelectorAll('li')
+        var i = 0
+
+        while (i<weblist.length) {
+            weblist[i].style.color='skyblue'
+            i=i+1
+        }
+    }
+
+    else {
+        document.querySelector('body').style.backgroundColor = 'white';
+        document.querySelector('body').style.color = 'black';
+        this.value = 'night';
+        var weblist = document.querySelectorAll('li')
+        var i = 0
+        while (i<weblist.length) {
+            weblist[i].style.color='black'
+            i=i+1
+            }
+    }
+    ">
+
+   
+</body>
+</html>
+
